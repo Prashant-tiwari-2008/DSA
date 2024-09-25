@@ -1,0 +1,83 @@
+1. Understand the Fundamentals
+Learn the basics of data structures like arrays, linked lists, stacks, queues, trees, heaps, hashmaps, graphs, and tries.
+Get comfortable with algorithms such as searching, sorting (quick sort, merge sort, etc.), and greedy algorithms.
+Study Big-O notation to analyze time and space complexity.
+
+2. Topic-Wise DSA Study Plan
+    Week 1-2: Arrays and Strings
+        Key Concepts:
+            Arrays, 2D Arrays, Sliding Window, Prefix Sum
+            String manipulation, Palindromes, Substrings
+        Common Problems:
+            Two Sum
+            Maximum Subarray (Kadane’s Algorithm)
+            Longest Substring without Repeating Characters
+
+    Week 3-4: Linked Lists
+        Key Concepts:
+            Singly Linked List, Doubly Linked List, Circular Linked List
+            Fast and slow pointers (Cycle detection)
+        Common Problems:
+            Reverse a Linked List
+            Merge Two Sorted Lists
+            Detect Cycle in Linked List
+    Week 5: Stacks and Queues
+        Key Concepts:
+            Stack and Queue implementation
+            Monotonic Stack/Queue
+            Problems related to balancing parentheses, and finding next/previous greater element
+        Common Problems:
+            Valid Parentheses
+            Largest Rectangle in Histogram
+            Sliding Window Maximum
+
+            
+Week 6: Trees (Binary Trees, Binary Search Trees)
+Key Concepts:
+Tree Traversal (Pre-order, In-order, Post-order)
+Binary Search Tree (BST), AVL Trees, Trie (Prefix Tree)
+Depth-First Search (DFS), Breadth-First Search (BFS)
+Common Problems:
+Lowest Common Ancestor
+Invert Binary Tree
+Binary Tree Level Order Traversal
+Week 7: Recursion and Backtracking
+Key Concepts:
+Recursion fundamentals, Memoization, and Dynamic Programming
+Permutations and combinations
+Common Problems:
+Subset Sum Problem
+N-Queens Problem
+Sudoku Solver
+Week 8: Dynamic Programming (DP)
+Key Concepts:
+Subproblems, Overlapping Subproblems, and Optimal Substructure
+Tabulation vs Memoization
+Common Problems:
+Fibonacci Number (Top-down & Bottom-up)
+Longest Common Subsequence
+0/1 Knapsack Problem
+Week 9: Graphs
+Key Concepts:
+Graph representations (Adjacency Matrix/List)
+DFS, BFS, Dijkstra’s Algorithm, Floyd-Warshall, Kruskal's Algorithm
+Topological Sorting
+Common Problems:
+Number of Islands
+Shortest Path in a Binary Matrix
+Clone Graph
+3. Practice Platforms
+Leetcode: Practice coding problems topic-wise. There are also many curated lists of interview problems.
+HackerRank: Offers a range of DSA challenges with varying difficulty.
+Codeforces/CodeChef: Focus on timed contests that challenge your problem-solving skills under pressure.
+GeeksforGeeks: Great for topic-wise problems and solutions with in-depth explanations.
+4. Mock Interviews and Competitions
+Participate in coding contests (Codeforces, LeetCode Weekly Contests).
+Conduct mock interviews on platforms like Pramp or InterviewBit.
+Time yourself when solving problems to simulate the interview environment.
+5. Additional Tips
+Practice consistently. Set a goal to solve at least 2-3 problems a day.
+Revise regularly by revisiting previously solved problems.
+Track your progress to identify your weak areas and work on them.
+Focus on optimization—start with brute force, then refine your solutions to improve time and space complexity.
+Would you like specific problem recommendations or explanations for any of these topics?

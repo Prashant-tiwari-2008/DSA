@@ -1,0 +1,78 @@
+1. Sorting Algorithms
+    Quick Sort: Divide and conquer, in-place sorting, average case O(n log n).
+    Merge Sort: Divide and conquer, stable sort, worst-case O(n log n).
+    Heap Sort: Based on binary heap, O(n log n).
+    Counting Sort / Radix Sort / Bucket Sort: Linear time sorting for integers with specific conditions (non-comparison sorts).
+
+2. Searching Algorithms
+    Binary Search: O(log n), used in sorted arrays or binary search trees.
+    Exponential Search: Efficient for searching in exponentially growing datasets.
+    Breadth-First Search (BFS): O(V + E), explores layer by layer, used in graphs.
+    Depth-First Search (DFS): O(V + E), explores depth-wise, used in trees and graphs.
+
+3. Graph Algorithms
+    Dijkstra's Algorithm: Shortest path algorithm for weighted graphs, O(V^2) or O(V log V) with a priority queue.
+    Floyd-Warshall Algorithm: All-pairs shortest path, O(V^3), dynamic programming approach.
+    Bellman-Ford Algorithm: Shortest path in graphs with negative weights, O(V * E).
+    Kruskal's Algorithm: Minimum spanning tree using greedy approach, O(E log E).
+    Prim's Algorithm: Minimum spanning tree using priority queue, O(V^2) or O(E log V) with a binary heap.
+    Topological Sorting: For Directed Acyclic Graphs (DAG), O(V + E).
+
+4. Dynamic Programming (DP) Algorithms
+    0/1 Knapsack Problem: Maximize profit with a weight limit, O(nW) where n is the number of items and W is the maximum weight.
+    Longest Increasing Subsequence: Find the longest subsequence where each element is greater than the previous one, O(n log n).
+    Longest Common Subsequence (LCS): Find the longest subsequence present in both strings, O(m * n).
+    Coin Change Problem: Minimum number of coins for a given amount, O(nW).
+    Matrix Chain Multiplication: Optimizing matrix multiplication order, O(n^3).
+    Edit Distance (Levenshtein Distance): Minimum operations to convert one string to another, O(m * n).
+
+5. Greedy Algorithms
+    Huffman Coding: Optimal prefix code, used in data compression, O(n log n).
+    Activity Selection Problem: Select maximum number of activities without overlap, O(n log n).
+    Fractional Knapsack Problem: Maximize profit with fractional weights allowed, O(n log n).
+    Job Sequencing Problem: Maximize profit from job scheduling, O(n log n).
+
+6. Divide and Conquer Algorithms
+    Merge Sort: Recursively divides the array into halves and merges them, O(n log n).
+    Quick Sort: Picks a pivot, partitions the array, and recursively sorts, O(n log n) on average.
+    Binary Search: Recursively divides the search space in half, O(log n).
+    Strassen’s Matrix Multiplication: Matrix multiplication using divide and conquer, O(n^2.81).
+
+7. Backtracking Algorithms
+    N-Queens Problem: Place N queens on an N x N board, O(N!).
+    Sudoku Solver: Fill a 9x9 grid following Sudoku rules, O(9^n).
+    Subsets / Permutations / Combinations: Generate all possible subsets, permutations, or combinations, O(2^n) or O(n!).
+
+8. Hashing
+    Hashing with Chaining: Used to resolve collisions in hash maps, O(1) for average case operations.
+    Open Addressing (Linear/Quadratic Probing): Alternative way to resolve hash collisions, O(1) for average case operations.
+    Rabin-Karp Algorithm: For string matching, using hashing to find patterns, O(n).
+
+9. Tree Algorithms
+    Tree Traversals (Pre-order, In-order, Post-order): Traversal techniques for binary trees, O(n).
+    Binary Search Tree (BST) Operations: Insertion, deletion, and search, O(log n).
+    AVL Tree / Red-Black Tree: Self-balancing binary search trees, O(log n) for operations.
+    Segment Tree: For range queries and updates, O(log n) for query and update.
+    Fenwick Tree (Binary Indexed Tree): For efficient range sum queries and updates, O(log n).
+
+10. String Algorithms
+    KMP Algorithm: String matching algorithm, O(m + n).
+    Rabin-Karp Algorithm: Efficient for multiple pattern searching using hashing, O(n).
+    Z Algorithm: Finds occurrences of a pattern in a text, O(n).
+    Trie (Prefix Tree): For storing strings, used in autocomplete or spell-check, O(L) per query where L is the length of the string.
+
+11. Number Theory Algorithms
+    Euclidean Algorithm: To find the greatest common divisor (GCD), O(log(min(a, b))).
+    Sieve of Eratosthenes: For finding all primes up to a number n, O(n log log n).
+    Modular Exponentiation: Efficient exponentiation under a modulus, O(log n).
+    Chinese Remainder Theorem: For solving systems of congruences, O(n).
+
+12. Miscellaneous Algorithms
+    Floyd’s Tortoise and Hare Algorithm: Cycle detection in a linked list, O(n).
+    Reservoir Sampling: Random sampling from a stream of data, O(n).
+    Union-Find (Disjoint Set Union): Used for finding and merging disjoint sets, O(α(n)) where α is the inverse Ackermann function.
+    Recommended Practice for Big Tech:
+
+Master common patterns in problem-solving (two-pointer, sliding window, recursion, etc.).
+Optimize solutions, focus on time and space complexity.
+Mock interviews with problem-solving on platforms like Leetcode, Pramp, and InterviewBit.

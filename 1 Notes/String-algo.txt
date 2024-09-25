@@ -1,0 +1,88 @@
+Here’s a list of important string algorithms to prepare for big companies, along with brief explanations of each:
+1. Brute Force String Matching
+    Description: A simple approach to find all occurrences of a pattern in a text. You check each position in the text to see if the substring starting there matches the pattern.
+    Time Complexity: O(n * m) where n is the length of the text and m is the length of the pattern.
+    Usage: This method is easy to implement but inefficient for large inputs.
+2. Knuth-Morris-Pratt (KMP) Algorithm
+    Description: An efficient string-matching algorithm that preprocesses the pattern to avoid unnecessary comparisons. It builds a Longest Prefix Suffix (LPS) array that helps to skip unnecessary matches.
+    Time Complexity: O(n + m)
+    Advantages: Avoids redundant comparisons by using the LPS array.
+    Usage: Commonly used for pattern searching in a large text.
+3. Rabin-Karp Algorithm
+    Description: This algorithm uses hashing to quickly find if a pattern matches a substring in a text. It compares the hash of the pattern with the hash of substrings of the text.
+    Time Complexity: O(n + m) on average, O(n * m) worst case.
+    Advantages: Efficient when searching for multiple patterns.
+    Usage: Useful for detecting plagiarism or multiple pattern searches.
+4. Z Algorithm
+    Description: Finds all occurrences of a pattern in a text in linear time. It constructs a Z-array, which stores the length of the longest substring starting from i that matches a prefix of the text.
+    Time Complexity: O(n + m)
+    Advantages: Simple and efficient for finding a pattern in a text or performing substring searches.
+    Usage: Useful in problems involving substring searches and finding repeating patterns.
+5. Boyer-Moore Algorithm
+    Description: A right-to-left string matching algorithm. It preprocesses the pattern to create two arrays, Bad Character and Good Suffix, which help skip sections of the text that can't possibly match the pattern.
+    Time Complexity: O(n / m) best case, O(n * m) worst case.
+    Advantages: Efficient when the pattern is large compared to the alphabet.
+    Usage: Often used for searching long patterns in large texts, as it skips more characters than KMP.
+6. Aho-Corasick Algorithm (Trie + Automaton)
+    Description: Used to search for multiple patterns in a text simultaneously. It builds a Trie of the patterns and converts it into a finite state machine to perform searches efficiently.
+    Time Complexity: O(n + m + k) where k is the number of matches found.
+    Advantages: Fast for multiple pattern searching.
+    Usage: Ideal for searching multiple patterns (like in dictionary lookups or bioinformatics).
+7. Suffix Arrays & LCP Array
+    Suffix Array:
+    Description: A sorted array of all suffixes of a given string. Useful for pattern matching, finding the longest common prefix (LCP), or solving problems like longest repeated substring.
+    Time Complexity: O(n log n)
+    LCP Array:
+    Description: LCP stands for Longest Common Prefix, and the LCP array stores the lengths of the longest common prefixes between consecutive suffixes in the suffix array.
+    Time Complexity: O(n)
+    Usage: Efficient for range queries, longest repeated substring, and other suffix-related problems.
+8. Suffix Trees
+    Description: A compressed trie of all the suffixes of a given string. It allows for efficient pattern matching, finding the longest common substring, and string comparison.
+    Time Complexity: O(n) for construction and O(m) for pattern matching.
+    Advantages: More space-efficient than a suffix array.
+    Usage: Used in applications like DNA sequencing and substring searches.
+9. Manacher's Algorithm (for Longest Palindromic Substring)
+    Description: A linear-time algorithm to find the longest palindromic substring in a given string.
+    Time Complexity: O(n)
+    Advantages: Very efficient, transforming the string to avoid the complexities of odd/even palindromes.
+    Usage: Particularly useful for finding palindromes in DNA sequences, texts, etc.
+10. Rolling Hash
+    Description: A hashing technique that allows you to compute the hash of a substring in constant time after computing the hash for the initial substring.
+    Time Complexity: O(n)
+    Advantages: Efficient for substring searches where you need to compare hashes instead of entire substrings.
+    Usage: Used in string matching algorithms like Rabin-Karp and in detecting anagrams or plagiarism.
+11. Trie (Prefix Tree)
+    Description: A tree-like data structure where each node represents a single character of a string. It’s used for storing and searching strings efficiently.
+    Time Complexity: O(L) for insert and search where L is the length of the string.
+    Advantages: Very fast lookup, often used in autocomplete and dictionary problems.
+    Usage: Useful for string matching, prefix search, and implementing dictionaries.
+12. Levenshtein Distance (Edit Distance)
+    Description: A dynamic programming algorithm to find the minimum number of edits (insertions, deletions, or substitutions) required to convert one string into another.
+    Time Complexity: O(n * m)
+    Advantages: Widely used in spell-checking, DNA sequence analysis, and fuzzy string matching.
+    Usage: Useful for spelling corrections, sequence alignment, and natural language processing.
+13. Burrows-Wheeler Transform (BWT)
+    Description: A text transformation that improves the efficiency of compression algorithms. The output of the transform is easier to compress, used in Bzip2.
+    Time Complexity: O(n log n)
+    Usage: Mainly used in data compression techniques and suffix array construction.
+14. Longest Common Substring / Subsequence
+    Longest Common Substring:
+    Description: A dynamic programming solution to find the longest substring that two given strings share.
+    Time Complexity: O(n * m)
+    Longest Common Subsequence:
+    Description: Similar to the substring problem but allows for non-contiguous matches (characters can be skipped).
+    Time Complexity: O(n * m)
+    Usage: Common in DNA sequence alignment, version control systems (to detect diffs), and in document comparison.
+15. Anagram Search / Check
+    Description: This involves finding whether two strings are anagrams of each other, or finding all anagrams of a given pattern in a string.
+    Approach:
+    Sort both strings and compare.
+    Use hashing to count character frequencies and compare counts.
+    Time Complexity: O(n) using a frequency count method.
+    Usage: Used in pattern matching, language processing, and dictionary lookups.
+
+Summary of Key Algorithms:
+    Pattern Matching: KMP, Boyer-Moore, Rabin-Karp, Z Algorithm
+    Substring Searching: Suffix Arrays, Suffix Trees, Rolling Hash
+    Dynamic Programming: Longest Common Subsequence, Longest Common Substring, Edit Distance
+    Specialized: Manacher's Algorithm (Palindrome), Aho-Corasick (Multiple Patterns)
