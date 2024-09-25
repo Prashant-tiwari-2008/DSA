@@ -11,22 +11,24 @@ class HashTable {
         return hash;
     }
 
-    set(key,value){
+    set(key, value) {
+        debugger
         let address = this._hash(key);
-        if(!this.data[address]){
+        if (!this.data[address]) {
             this.data[address] = [];
-            this.data[address].push([key,value])
+            this.data[address].push([key, value])
             // console.log(this.data)
+        } else {
+            this.data[address].push([key, value])
         }
-        this.data[address].push([key,value])
     }
 
-    get(key){
+    get(key) {
         let address = this._hash(key)
         const currentBucket = this.data[address];
-        if(currentBucket.length){
-            for(let i=0;i<currentBucket.length;i++){
-                if(currentBucket[i][0] === key){
+        if (currentBucket.length) {
+            for (let i = 0; i < currentBucket.length; i++) {
+                if (currentBucket[i][0] === key) {
                     return currentBucket[i][1]
                 }
             }
@@ -34,23 +36,23 @@ class HashTable {
         return undefined
     }
 
-    keys(){
-        const keysArray = [];
-        for(let i=0;i<this.data.length;i++){
-            debugger
-            if(this.data[i]){
-                console.log(this.data[i])
-                keysArray.push(this.data[i][0])
-            }
-        }
-        return keysArray
-    }
+//    / keys() {
+//         const keysArray = [];
+//         for (let i = 0; i < this.data.length; i++) {
+//             debugger
+//             if (this.data[i]) {
+//                 console.log(this.data[i])
+//                 keysArray.push(this.data[i][0])
+//             }
+//         }
+//         return keysArray
+//     }
 
-     //keys()
-     keys(){
+    //keys()
+    keys() {
         let key = [];
-        for(let i = 0;i<this.data.length;i++){
-            for(let j=0;j<this.data[i].length;j++){
+        for (let i = 0; i < this.data.length; i++) {
+            for (let j = 0; j < this.data[i].length; j++) {
                 key.push(this.data[i][j][0])
             }
         }
@@ -60,9 +62,9 @@ class HashTable {
 
 
 const myHashTable = new HashTable(5);
-myHashTable.set('grapes',10000);
-myHashTable.set('apple',20000);
-myHashTable.set('orange',30000);
+myHashTable.set('grapes', 10000);
+myHashTable.set('apple', 20000);
+myHashTable.set('orange', 30000);
 let result = myHashTable.get('orange');
-// console.log("result",result)
+console.log("result", result)
 console.log(myHashTable.keys())

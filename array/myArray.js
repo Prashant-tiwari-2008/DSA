@@ -1,4 +1,5 @@
 console.log("myArray")
+
 class myCustomeArry {
     constructor() {
         this.length = 0;
@@ -37,21 +38,22 @@ class myCustomeArry {
         let item = this.data[0]
         this.shiftItem(0)
     }
-
-    //unshift Method ==> add element at first position
-    unshift(item){
-        this.length++;
-        this.shiftRight();
-        // this.data[0] = item;
-    }
-
+    
     //single responsiblity
     shiftItem(index) {
+        debugger
         for (let i = index; i < this.length - 1; i++) {
             this.data[i] = this.data[i + 1]
         }
         delete this.data[this.length - 1]
         this.length--;
+    }
+    
+    //unshift Method ==> add element at first position
+    unshift(item){
+        this.length++;
+        this.shiftRight();
+        // this.data[0] = item;
     }
 
     //shift item in right side
@@ -72,6 +74,6 @@ myArray.push("ankit");
 // for (let i = 0; i < 10; i++) {
 //     myArray.push(Math.floor(Math.random() * 100));
 // }
-
- myArray.unshift('prakash');
+myArray.deleteAtIndex(2)
+// myArray.unshift('prakash');
 console.log(myArray, "myArray")
