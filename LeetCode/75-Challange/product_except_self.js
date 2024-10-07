@@ -36,20 +36,17 @@ var productExceptSelf = function (nums) {
     const n = nums.length;
     let result = new Array(n).fill(1);
 
-    // Step 1: Calculate prefix products
     let prefix = 1;
     for (let i = 0; i < n; i++) {
-        result[i] = prefix;  // Store the prefix product for index i
-        prefix *= nums[i];    // Update prefix product
+        result[i] = prefix; 
+        prefix *= nums[i]; 
     }
 
-    // Step 2: Calculate suffix products and multiply with prefix products
     let suffix = 1;
     for (let i = n - 1; i >= 0; i--) {
-        result[i] *= suffix;  // Multiply the current result by the suffix product
-        suffix *= nums[i];    // Update suffix product
-    }
-
+        result[i] *= suffix;  
+        suffix *= nums[i]; 
+    }    
     return result;
 };
 
