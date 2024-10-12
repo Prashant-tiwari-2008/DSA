@@ -1,24 +1,25 @@
 class Node {
-    constructor(value){
-        this.value=value,
-        this.next=null
+    constructor(value) {
+        this.value = value,
+            this.next = null
     }
 }
 
-class LinkedList{
-    constructor(value){
+class LinkedList {
+    constructor(value) {
         this.head = {
-            value:value,
-            next:null
+            value: value,
+            next: null
         }
         this.tail = this.head;
         this.length = 1;
     }
 
-    appned(value){
+    // add value in the end O(1)
+    appned(value) {
         const newNode = {
-            value:value,
-            next : null
+            value: value,
+            next: null
         };
         this.tail.next = newNode;
         this.tail = newNode;
@@ -26,63 +27,86 @@ class LinkedList{
         return this;
     }
 
-    prepend(value){
+    // add value in the starting
+    prepend(value) {
         const newNode = {
-            value:value,
-            next:this.head
+            value: value,
+            next: this.head
         }
         this.head = newNode;
         this.length++;
         return this;
     }
 
-    printList(){
+    //Traverse the linked list => print all the value
+    printList() {
         const array = [];
         let currentNode = this.head;
-        while(currentNode !== null){
+        while (currentNode !== null) {
             array.push(currentNode.value);
             currentNode = currentNode.next;
         }
         return array
     }
 
-    insert(index,value){
+    // Insert a node at a given index
+    insert(index, value) {
         const newNode = {
             value,
-            next:null
+            next: null
         }
-        const leader = this.traverseToIndex(index-1)
+        const leader = this.traverseToIndex(index - 1)
         const holdingPointer = leader.next;
         leader.next = newNode;
         newNode.next = holdingPointer;
         this.length++;
     }
 
-    traverseToIndex(index){
+    //Search for a index in the list    
+    traverseToIndex(index) {
         let counter = 0;
         let currentNode = this.head;
-        while(counter !== index){
+        while (counter !== index) {
             currentNode = currentNode.next;
             counter++;
         }
         return currentNode;
     }
 
-    remove(value){
-        let leader = this.traverseToValue(value)
-        console.log(leader,"leader");
+    // Delete a node by value
+    remove(value) {
+        let currentNode = this.head;
+        let currentValue = this.head.value;
+        let prenode = currentNode;
+        while (value !== currentValue) {
+            prenode = currentNode;
+            currentNode = currentNode.next;
+            currentValue = currentNode.value;
+        }
+        prenode.next = currentNode.next;
+        this.length--;
     }
 
-    traverseToValue(value){
-        let counter = 0;
+    //Search for a value in the list
+    traverseToValue(value) {
         let currentValue = this.head.value;
         let currentNode = this.head;
-        while(value !== currentValue){
+        while (value !== currentValue) {
             currentNode = currentNode.next;
             currentValue = currentNode.value
         }
         return currentNode;
     }
+
+    //Reverse the linked list
+    reverse() {
+        
+    }
+
+    //Need to Add
+    // Delete a node at a given inde
+
+
 }
 
 const myLinkedList = new LinkedList(10);
@@ -94,5 +118,5 @@ myLinkedList.appned(52);
 myLinkedList.appned(300);
 myLinkedList.prepend(200);
 
-myLinkedList.insert(2,120);
+myLinkedList.insert(2, 120);
 console.log(myLinkedList.printList())
