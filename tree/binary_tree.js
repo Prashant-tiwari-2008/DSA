@@ -70,18 +70,19 @@ class BinaryTree {
     }
 
     //1. Inorder Traversal => Iterative Implementation
-    inorderTraversal_1(){   
-        if(this.root === null) return
+    inorderTraversal_1() {
+        if (this.root === null) return
         const stack = [];
-        while(stack.length > 0 || currentNode !== nul){
-            while(currentNode !== null){
-                stack.push(currentNode) // push left nodes
+        let currentNode = this.root;
+
+        while (stack.length > 0 || currentNode !== null) {
+            while (currentNode !== null) {
+                stack.push(currentNode);
                 currentNode = currentNode.left;
             }
-
             currentNode = stack.pop();
             console.log(currentNode.value);
-            currentNode = currentNode.right // move to the right subtree
+            currentNode = currentNode.right
         }
     }
 
@@ -95,7 +96,7 @@ class BinaryTree {
     }
 
     // 2.Preorder Traversal  => Iterative Implementation => self write
-    preorderTraversal_1(){}
+    preorderTraversal_1() { }
     //3. Postorder Traversal (Left, Right, Root) => DFS(Depth first search)
     postorderTraversal(node) {
         if (node === null) return;
@@ -103,9 +104,9 @@ class BinaryTree {
         this.preorderTraversal(node.right);
         console.log(node.value, "Post order")
     }
-    
+
     // 3.PostOrder Traversal  => Iterative Implementation => self write
-    postorderTraversal_1(){}
+    postorderTraversal_1() { }
 
     //IMP- 4.Level-order traversal (Breadth-First Search)
     levelOrderTraversal() {
