@@ -2,7 +2,7 @@
 class Graph {
     constructor() {
         this.numberOfNodes = 0;
-        this.adjacentList = {}
+        this.adjacentList = {} // Store vertices and their connections
     }
 
     addVertex(node) {
