@@ -41,6 +41,32 @@ class Graph {
         dfs(start);
         return result;
     }
+
+    bfsTraversal(adjMatrix, startNode) {
+        const visited = new Array(adjMatrix.length).fill(false);
+        const queue = [];
+        const result = [];
+    
+        // Start BFS from the startNode
+        queue.push(startNode);
+        visited[startNode] = true;
+    
+        while (queue.length > 0) {
+            const currentNode = queue.shift();
+            result.push(currentNode);
+    
+            // Check the neighbors of the currentNode
+            for (let i = 0; i < adjMatrix.length; i++) {
+                // If there is an edge and the node is not visited
+                if (adjMatrix[currentNode][i] === 1 && !visited[i]) {
+                    queue.push(i);
+                    visited[i] = true;
+                }
+            }
+        }
+    
+        return result;
+    }
 }
 
 
